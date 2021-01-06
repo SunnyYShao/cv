@@ -58,7 +58,7 @@ Contact {#contact}
 - <i class="fa fa-envelope"></i> sunny@sunnyshao.com
 - <i class="fa fa-twitter"></i> [sunny_Y_SHAO](https://twitter.com/sunny_Y_SHAO)
 - <i class="fa fa-github"></i> [github.com/SunnyYShao](https://github.com/SunnyYShao)
-- <i class="fa fa-link"></i> [sunnyshao.come](https://sunnyshao.com/)
+- <i class="fa fa-link"></i> [sunnyshao.com](https://sunnyshao.com/)
 - <i class="fa fa-linkedin"></i> [/sunnyyshao/](https://linkedin.com/in/sunnyyshao/)
 - <i class="fa fa-phone"></i> (818) 835-7152
 
@@ -77,7 +77,7 @@ build_skill_bars(skills)
 More info {#more-info}
 --------------------------------------------------------------------------------
 
-See full CV at [sunnyshao.com/cv](https://sunnyshao.com/cv) for more complete list of positions and publications.
+See full CV at [https://sunnyshao.com](https://sunnyshao.com) for more complete list of positions and publications.
 
 
 Disclaimer {#disclaimer}
