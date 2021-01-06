@@ -1,0 +1,127 @@
+---
+title: Nick Strayer's Resume"
+author: Nick Strayer
+date: "`r Sys.Date()`"
+output:
+  pagedown::html_resume:
+    css: ['css/custom_resume.css', 'css/styles.css', 'resume']
+    # set it to true for a self-contained HTML page but it'll take longer to render
+    self_contained: true
+---
+
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(
+  results='asis', 
+  echo = FALSE
+)
+library(here)
+library(tidyverse)
+library(glue)
+
+# Set this to true to have links turned into footnotes at the end of the document
+PDF_EXPORT <- FALSE
+
+# Holds all the links that were inserted for placement at the end
+links <- c()
+
+source('parsing_functions.R') # Functions for building sections from CSV data
+source('common_variables.R')  # Small variables for non-csv data such as intro text
+
+# First let's get the data, filtering to only the items tagged as
+# Resume items
+position_data <- read_csv('positions_sunny.csv') %>% 
+  filter(in_resume) %>% 
+  mutate(
+    # Build some custom sections by collapsing others
+    section = case_when(
+      section %in% c('data_consulting_positions') ~ 'positions', 
+      section %in% c('data_tools', 'survey_projects') ~ 'projects',
+      TRUE ~ section
+    )
+  ) 
+
+```
+
+
+Aside
+================================================================================
+
+
+![logo](all_projects.png){width=100%}
+
+Contact {#contact}
+--------------------------------------------------------------------------------
+
+
+
+- <i class="fa fa-envelope"></i> sunny@sunnyshao.com
+- <i class="fa fa-twitter"></i> [sunny_Y_SHAO](https://twitter.com/sunny_Y_SHAO)
+- <i class="fa fa-github"></i> [github.com/SunnyYShao](https://github.com/SunnyYShao)
+- <i class="fa fa-link"></i> [sunnyshao.come](https://sunnyshao.com/)
+- <i class="fa fa-linkedin"></i> [/sunnyyshao/](https://linkedin.com/in/sunnyyshao/)
+- <i class="fa fa-phone"></i> (818) 835-7152
+
+
+
+Language Skills {#skills}
+--------------------------------------------------------------------------------
+
+
+```{r}
+build_skill_bars(skills)
+```
+
+
+
+More info {#more-info}
+--------------------------------------------------------------------------------
+
+See full CV at [sunnyshao.com/cv](https://sunnyshao.com/cv) for more complete list of positions and publications.
+
+
+Disclaimer {#disclaimer}
+--------------------------------------------------------------------------------
+
+Made w/ [**pagedown**](https://github.com/rstudio/pagedown). 
+
+Source code: [github.com/sunnyyshao/cv](https://github.com/sunnyyshao/cv).
+
+Last updated on `r Sys.Date()`.
+
+
+
+
+Main
+================================================================================
+
+Sunny Shao {#title}
+--------------------------------------------------------------------------------
+
+
+
+Education {data-icon=graduation-cap data-concise=true}
+--------------------------------------------------------------------------------
+
+```{r}
+position_data %>% print_section('education')
+```
+
+
+
+Selected Positions {data-icon=suitcase}
+--------------------------------------------------------------------------------
+
+```{r}
+position_data %>% print_section('positions')
+```
+
+Selected Projects {data-icon=database}
+--------------------------------------------------------------------------------
+
+
+```{r}
+position_data %>% print_section('projects')
+```
+
+
