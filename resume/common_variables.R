@@ -8,9 +8,8 @@ intro_text <- "I have made [visualizations viewed tens of thousands of people](h
 skills <- tribble(
   ~skill,               ~level,
   "R",                  5,
-  "STATA",              5,
+  "STATA ",             5,
   "Python",             4,
   "SQL",                4,
-  "CSS",                3,
-  "HTML",               3
+  "CSS/HTML",           3
 )
