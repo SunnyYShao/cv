@@ -7,6 +7,7 @@ resume_files/
 README.html
 *_cache/
 cv.html
-
+*.csv
+resume/*.csv
 ddcv_cache.rds
 .Rproj.user

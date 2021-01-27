@@ -30,16 +30,16 @@ source('common_variables.R')  # Small variables for non-csv data such as intro t
 
 # First let's get the data, filtering to only the items tagged as
 # Resume items
-position_data <- read_csv('positions_sunny.csv') %>% 
+position_data <- read_csv('positions_sunny_survey_research.csv') %>% 
   filter(in_resume) %>% 
   mutate(
     # Build some custom sections by collapsing others
     section = case_when(
       section %in% c('data_consulting_positions') ~ 'positions', 
       section %in% c('data_tools', 'survey_projects') ~ 'projects',
-      TRUE ~ section
-    )
-  ) 
+      section %in% c('press') ~ 'press',
+      section %in% c('grant') ~ 'grant',
+      TRUE ~ section)) 
 
 ```
 
@@ -48,7 +48,6 @@ Aside
 ================================================================================
 
 
-![logo](all_projects.png){width=100%}
 
 Contact {#contact}
 --------------------------------------------------------------------------------
@@ -74,10 +73,10 @@ build_skill_bars(skills)
 
 
 
-More info {#more-info}
+Proficient Open Source R Packages (shortlist) {#more-info}
 --------------------------------------------------------------------------------
 
-See full CV at [https://sunnyshao.com](https://sunnyshao.com) for more complete list of positions and publications.
+tidyverse | tidycensus | tigris | tidytext | ggplot2 | srvyr & haven | stringr | quanteda | rvest | shiny & and more
 
 
 Disclaimer {#disclaimer}
@@ -109,7 +108,7 @@ position_data %>% print_section('education')
 
 
 
-Selected Positions {data-icon=suitcase}
+Selected Experience {data-icon=suitcase}
 --------------------------------------------------------------------------------
 
 ```{r}
@@ -124,4 +123,26 @@ Selected Projects {data-icon=database}
 position_data %>% print_section('projects')
 ```
 
+Selected Grants {data-icon=award}
+--------------------------------------------------------------------------------
+
+
+```{r}
+position_data %>% print_section('grant')
+```
+
+Selected Press {data-icon=newspaper}
+--------------------------------------------------------------------------------
+
+
+```{r}
+position_data %>% print_section('press')
+```
+Invited Talk {data-icon=users}
+--------------------------------------------------------------------------------
+
+
+```{r}
+position_data %>% print_section('invited_talk')
+```
 
