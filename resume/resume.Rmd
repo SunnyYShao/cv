@@ -30,7 +30,7 @@ source('common_variables.R')  # Small variables for non-csv data such as intro t
 
 # First let's get the data, filtering to only the items tagged as
 # Resume items
-position_data <- read_csv('positions_sunny_survey_research.csv') %>% 
+position_data <- read_csv('positions_sunny_ds_director.csv') %>% 
   filter(in_resume) %>% 
   mutate(
     # Build some custom sections by collapsing others
@@ -47,6 +47,7 @@ position_data <- read_csv('positions_sunny_survey_research.csv') %>%
 Aside
 ================================================================================
 
+[<i class='fas fa-download'></i> Check My Full CV](https://sunnyyshao.github.io/cv)
 
 
 Contact {#contact}
@@ -73,10 +74,10 @@ build_skill_bars(skills)
 
 
 
-Proficient Open Source R Packages (shortlist) {#more-info}
+Proficient R Packages {#more-info}
 --------------------------------------------------------------------------------
 
-tidyverse | tidycensus | tigris | tidytext | ggplot2 | srvyr & haven | stringr | quanteda | rvest | shiny & and more
+tidyverse | tidycensus | tidytext | ggplot2 | srvyr | haven | tigris | stringr | quanteda | rvest | shiny & and more
 
 
 Disclaimer {#disclaimer}
@@ -123,6 +124,16 @@ Selected Projects {data-icon=database}
 position_data %>% print_section('projects')
 ```
 
+
+Selected Reports {data-icon=book}
+--------------------------------------------------------------------------------
+
+
+```{r}
+position_data %>% print_section('report')
+```
+
+
 Selected Grants {data-icon=award}
 --------------------------------------------------------------------------------
 
@@ -145,4 +156,3 @@ Invited Talk {data-icon=users}
 ```{r}
 position_data %>% print_section('invited_talk')
 ```
-
