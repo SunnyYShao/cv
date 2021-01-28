@@ -74,10 +74,10 @@ build_skill_bars(skills)
 
 
 
-Proficient R Packages {#more-info}
+Proficient Packages {#more-info}
 --------------------------------------------------------------------------------
 
-tidyverse | tidycensus | tidytext | ggplot2 | srvyr | haven | tigris | stringr | quanteda | rvest | shiny & and more
+scikit-learn | matplotlib | numpy | pandas | tidyverse | tidycensus | tidytext | ggplot2 | srvyr | haven | tigris | stringr | quanteda | rvest | shiny & and more
 
 
 Disclaimer {#disclaimer}
