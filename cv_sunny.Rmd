@@ -55,7 +55,7 @@ Aside
 # datadrivencv::build_network_logo(CV$entries_data)
 
 #insert the map of LA from the census project
-knitr::include_graphics('./all_projects.png')
+#knitr::include_graphics('./all_projects.png')
 
 ```
 

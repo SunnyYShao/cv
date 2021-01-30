@@ -11,8 +11,13 @@ and visualization projects for both [public and private stakeholders](https://su
 # Language skills for skill bars visualization
 skills <- tribble(
   ~skill,               ~level,
-  "R",                  5,
+  "R, Stata",           5,
   "Python",             4,
   "SQL",                4,
-  "CSS/HTML",           3
-)
+  "Data Visualization", 5,
+  "Data Mining",        5,
+  "GIS Analysis",       5,
+  "Regression Analysis",5,
+  "Bayesian Modeling",  4,
+  "Machine Learning",   4
+  )
