@@ -83,7 +83,7 @@ Research Skills {#skills}
 CV %>% print_skill_bars()
 ```
 
-Disclaimer {#disclaimer}
+Reference {#disclaimer}
 --------------------------------------------------------------------------------
 
 Made with the R package [**pagedown**](https://github.com/rstudio/pagedown). 
@@ -122,7 +122,7 @@ Survey Projects & Focus Group Study {data-icon=poll}
 CV %<>% print_section('survey_projects')
 ```
 
-Data Tools Development {data-icon=database}
+Data Dashboards {data-icon=database}
 --------------------------------------------------------------------------------
 
 ```{r}
@@ -142,7 +142,7 @@ CV %<>% print_section('publication_reports')
 ```
 :::
 
-Blogpost Writting {data-icon=pen}
+Analytics Blog {data-icon=pen}
 --------------------------------------------------------------------------------
 ```{r}
 CV %<>% print_section('blog')
@@ -157,7 +157,7 @@ CV %<>% print_section('teaching_positions')
 
 ```
 
-Selected Presentations & Invited Talks {data-icon=users}
+Presentations & Invited Talks {data-icon=users}
 --------------------------------------------------------------------------------
 ```{r}
 CV %<>% print_section('presentation')
@@ -174,7 +174,7 @@ Selected Press  {data-icon=newspaper}
 CV %<>% print_section('press')
 ```
 
-Grants and Awards {data-icon=award}
+Honors and Awards {data-icon=award}
 --------------------------------------------------------------------------------
 
 ```{r}
