@@ -1,3 +1,4 @@
+
 # This script builds both the HTML and PDF versions of your CV
 
 # If you want to speed up rendering for googlesheets driven CVs you can cache a
@@ -11,7 +12,7 @@
 library(tidyverse)
 source("CV_printing_functions.R")
 cv_data <- create_CV_object(
-  data_location = "https://docs.google.com/spreadsheets/d/1loQksETainJHVRMElZNa8SfG62l93F2sX5x5kDSGzvo",
+  data_location = "https://docs.google.com/spreadsheets/d/1j61HVKzRylffv0Z3vRmt5sxXJEFiSeEmraW2JPUSSxU",
   cache_data = FALSE)
 
 readr::write_rds(cv_data, 'cached_positions.rds')
